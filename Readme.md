@@ -47,10 +47,6 @@ University of Delhi | 2025
 - Microsoft Certified: PL-300 — Power BI
 - CampusX — Data Analysis Using Power BI
 
-## 🌐 Portfolio
-
-[Visit my portfolio](YOUR_PORTFOLIO_URL)
-
 ## 📫 Contact
 
 - Email: kunalkash50@gmail.com
