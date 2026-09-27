@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kunal Kashyap | Data Analyst</title>
+  <meta name="description"
+    content="Kunal Kashyap — Data Analyst specializing in SQL, Power BI, Python and Machine Learning. Turning raw data into business decisions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===================== LOADING SCREEN ===================== -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-brace">{</span>
+      <span class="loader-text" id="loaderText">loading_profile</span>
+      <span class="loader-brace">}</span>
+      <div class="loader-bar">
+        <div class="loader-bar-fill" id="loaderFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SCROLL PROGRESS ===================== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===================== CURSOR GLOW (desktop only) ===================== -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ===================== FLOATING SOCIAL BAR ===================== -->
+  <aside class="floating-social" aria-label="Social links">
+    <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+        <path
+          d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+      </svg></a>
+    <a href="#" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24">
+        <path
+          d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+      </svg></a>
+    <a href="mailto:kunalgeminikumar@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24">
+        <path
+          d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.9c.29.23.7.23.99 0L19.8 6H4.2zm15.8 1.6-7.1 5.75a2.5 2.5 0 0 1-3.13 0L4.7 7.6V18h15.3V7.6z" />
+      </svg></a>
+  </aside>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner">
+      <a href="#hero" class="logo">Kunal<span class="dot">.</span>kk</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" />
+            <path
+              d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certs</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <canvas class="particle-canvas" id="particleCanvas"></canvas>
+      <div class="blob blob-blue"></div>
+      <div class="blob blob-purple"></div>
+
+      <div class="hero-inner">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Hi, i'm</p>
+          <h1 class="hero-name">Kunal <span class="grad-text">Kashyap</span></h1>
+          <h2 class="hero-role">Data Analyst</h2>
+          <div class="typing-wrap">
+            <span class="typing-prefix">&gt;</span>
+            <span class="typing-text" id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+          <p class="hero-desc">I turn raw, messy data into dashboards and decisions — with SQL, Power BI, Python and a
+            background in analytical writing.</p>
+          <div class="hero-actions">
+            <a href="Data/Resume.pdf" class="btn btn-primary ripple" download>
+              <span>Download Resume</span>
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-ghost ripple"><span>Contact Me</span></a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/kunal-kashyap2909/" target="_blank" rel="noopener"
+              aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                <path
+                  d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+              </svg></a>
+            <a href="https://github.com/kunal-kashyap635/" target="_blank" rel="noopener" aria-label="GitHub"><svg
+                viewBox="0 0 24 24">
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+              </svg></a>
+            <a href="mailto:kunalkash50@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24">
+                <path
+                  d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.9c.29.23.7.23.99 0L19.8 6H4.2zm15.8 1.6-7.1 5.75a2.5 2.5 0 0 1-3.13 0L4.7 7.6V18h15.3V7.6z" />
+              </svg></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal data-reveal-delay="150">
+          <div class="photo-frame tilt" id="photoTilt">
+            <div class="photo-placeholder">
+              <img src="Data/kunalprof.png" alt="Kunal Kashyap - Data Analyst" class="profile-img">
+            </div>
+            <span class="frame-corner tl"></span><span class="frame-corner tr"></span>
+            <span class="frame-corner bl"></span><span class="frame-corner br"></span>
+          </div>
+          <!-- signature element: live query card -->
+          <div class="query-card glass">
+            <div class="query-dots"><span></span><span></span><span></span></div>
+            <pre class="query-code"><code><span class="q-key">SELECT</span> role, impact
+<span class="q-key">FROM</span> kunal.experience
+<span class="q-key">WHERE</span> focus = <span class="q-str">'business_value'</span>
+<span class="q-key">ORDER BY</span> accuracy <span class="q-key">DESC</span>;</code></pre>
+            <div class="query-result">
+              <span class="chip">88% accuracy</span>
+              <span class="chip">R² 0.91</span>
+              <span class="chip">50K+ rows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>01 — About</p>
+        <h2 class="section-title" data-reveal>From words to <span class="grad-text">numbers</span></h2>
+        <div class="about-grid">
+          <div class="about-copy" data-reveal>
+            <p>I started with a Bachelor of Arts (Hons) in English — years spent close-reading text, building arguments,
+              and finding the story inside a pile of information. That instinct turned out to translate directly into
+              data analytics: the story is just told in rows and columns instead of paragraphs.</p>
+            <p>Today I work hands-on across <strong>Excel, SQL, Power BI, and Python</strong>, building the bridge
+              between raw operational data and the decisions a business actually needs to make. I care most about
+              business intelligence and data visualization — the moment a dashboard makes a hidden trend obvious.</p>
+            <p>I've applied that on 25K+ employee records to predict attrition, on 50K+ retail rows to build a live
+              sales dashboard, and on 30+ SQL case studies that mirror real business questions. I'm looking to bring
+              that same rigor to a team that ships decisions, not just reports.</p>
+            <div class="about-tags">
+              <span class="tag">Business Intelligence</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Statistical Analysis</span>
+            </div>
+          </div>
+          <div class="about-stats" data-reveal data-reveal-delay="150">
+            <div class="stat-card glass">
+              <span class="stat-num" data-counter data-target="6.75" data-decimals="2">0</span>
+              <span class="stat-label">CGPA / 10 · B.A. (Hons) English</span>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num" data-counter data-target="2">0</span>
+              <span class="stat-label">Internships in Data / ML</span>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num" data-counter data-target="4">0</span>
+              <span class="stat-label">Shipped end-to-end projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>02 — Skills</p>
+        <h2 class="section-title" data-reveal>Tools I turn into <span class="grad-text">insight</span></h2>
+        <p class="section-sub" data-reveal>Every bar below is sized the way I'd size it on a real dashboard — a quick
+          read on where I'm strongest.</p>
+
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>03 — Experience</p>
+        <h2 class="section-title" data-reveal>Where I've <span class="grad-text">shipped</span> work</h2>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <span class="timeline-date">Jan 2026 – Apr 2026</span>
+              <h3>Machine Learning Intern</h3>
+              <p class="timeline-org">Unified Mentor Pvt. Ltd.</p>
+              <p class="timeline-desc">Built a workforce attrition prediction model on 25K+ employee records — turning
+                HR exit data into an early-warning signal for the business.</p>
+              <ul class="timeline-list">
+                <li>Logistic Regression model reaching <strong>88% accuracy</strong></li>
+                <li>Feature engineering &amp; exploratory data analysis</li>
+                <li>Streamlit dashboard cutting manual analysis time by 50%</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">Python</span><span class="tag">Scikit-learn</span><span
+                  class="tag">Streamlit</span><span class="tag">EDA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-reveal>
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass">
+              <span class="timeline-date">Nov 2025 – Jan 2026</span>
+              <h3>Data Science Intern</h3>
+              <p class="timeline-org">InLighnX Global Pvt. Ltd.</p>
+              <p class="timeline-desc">Built a laptop price prediction engine, taking a spec sheet and returning a fair
+                market price in real time.</p>
+              <ul class="timeline-list">
+                <li>XGBoost regressor scoring <strong>R² 0.91</strong></li>
+                <li>Feature selection &amp; hyperparameter tuning</li>
+                <li>Streamlit app for instant, user-driven predictions</li>
+              </ul>
+              <div class="timeline-tags">
+                <span class="tag">XGBoost</span><span class="tag">Feature Selection</span><span
+                  class="tag">Streamlit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>04 — Projects</p>
+        <h2 class="section-title" data-reveal>Work worth a <span class="grad-text">closer look</span></h2>
+
+        <div class="projects-grid">
+
+          <!-- ================= VRINDA STORE ================= -->
+          <article class="project-card glass" data-reveal data-reveal-delay="100">
+            <div class="project-top">
+              <span class="project-tag">Excel · Sales Analysis</span>
+            </div>
+
+            <h3>Vrinda Store Sales Analysis</h3>
+
+            <p>
+              End-to-end sales analysis of Vrinda Store's 2022 sales data using
+              Excel, PivotTables, and interactive visualizations to understand
+              customer behaviour, sales trends, and channel performance.
+            </p>
+
+            <ul class="project-points">
+              <li>March recorded the highest monthly sales at ₹1.92M</li>
+              <li>92% of orders were successfully delivered</li>
+              <li>Maharashtra, Karnataka &amp; Uttar Pradesh were the top sales states</li>
+              <li>Women contributed 64% of sales, with adult women aged 19–50 contributing 54.41%</li>
+            </ul>
+
+            <div class="project-links">
+              <a href="https://github.com/kunal-kashyap635/Vrinda_Sales_Analysis" target="_blank"
+                rel="noopener noreferrer" class="btn btn-small btn-primary ripple">
+                <span>GitHub</span>
+              </a>
+
+              <a href="Data/Vrinda_Store_Sales_Report.pptx" target="_blank" rel="noopener noreferrer"
+                class="btn btn-small btn-ghost ripple">
+                <span>Presentation</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ================= WORLD LAYOFFS ================= -->
+          <article class="project-card glass" data-reveal data-reveal-delay="100">
+            <div class="project-top">
+              <span class="project-tag">MySQL · SQL</span>
+            </div>
+
+            <h3>World Layoffs SQL Case Study</h3>
+
+            <p>
+              End-to-end SQL analysis of global layoff data to identify trends,
+              patterns, and business insights across companies, industries,
+              and time periods.
+            </p>
+
+            <ul class="project-points">
+              <li>Analyzed 2,361 layoff records</li>
+              <li>Used CTEs, Window Functions &amp; CASE statements</li>
+              <li>Applied ranking functions to generate business insights</li>
+            </ul>
+
+            <div class="project-links">
+              <a href="https://github.com/kunal-kashyap635/SQL_Case_Study_World_layoffs" target="_blank"
+                rel="noopener noreferrer" class="btn btn-small btn-primary ripple">
+                <span>GitHub</span>
+              </a>
+
+              <a href="Data/World_Layoffs_SQL_presentation.pptx" target="_blank" rel="noopener noreferrer"
+                class="btn btn-small btn-ghost ripple">
+                <span>Presentation</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- ================= US FINANCIAL ================= -->
+          <article class="project-card glass" data-reveal data-reveal-delay="100">
+            <div class="project-top">
+              <span class="project-tag">
+                Power BI · DAX · Power Query · Power Automate · Python · Google Drive API
+              </span>
+            </div>
+
+            <h3>U.S. Financial Market Analysis</h3>
+
+            <p>
+              End-to-end automated financial analytics pipeline combining
+              Power Automate, Google Drive API, Python, and Power BI to analyze
+              customer and financial trends.
+            </p>
+
+            <ul class="project-points">
+              <li>Processed 65,000 financial records</li>
+              <li>Reduced manual reporting time by 20%</li>
+              <li>Built DAX measures, Power Query transformations &amp; interactive dashboards</li>
+            </ul>
+
+            <div class="project-links">
+              <a href="https://github.com/kunal-kashyap635/US-Financial-Market" target="_blank"
+                rel="noopener noreferrer" class="btn btn-small btn-primary ripple">
+                <span>GitHub</span>
+              </a>
+
+              <button type="button" class="btn btn-small btn-ghost ripple"
+                onclick="alert('Presentation available soon!')">
+                <span>Presentation · Soon</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- ================= CUSTOMER CHURN ================= -->
+          <article class="project-card glass" data-reveal>
+            <div class="project-top">
+              <span class="project-tag">
+                Python · Pandas · Matplotlib · Seaborn
+              </span>
+            </div>
+
+            <h3>Customer Churn Analysis</h3>
+
+            <p>
+              Exploratory data analysis of an OTT subscription dataset to
+              understand customer segments, contract types, subscription
+              behaviour, and churn patterns.
+            </p>
+
+            <ul class="project-points">
+              <li>Created 20+ business KPIs</li>
+              <li>Identified a 28.6% overall churn rate</li>
+              <li>Compared churn across contract types and customer segments</li>
+            </ul>
+
+            <div class="project-links">
+              <a href="https://github.com/kunal-kashyap635/CustomerChurnAnalysis" target="_blank"
+                rel="noopener noreferrer" class="btn btn-small btn-primary ripple">
+                <span>GitHub</span>
+              </a>
+
+              <a href="Data/Churn_Analysis_Presentation.pptx" target="_blank" rel="noopener noreferrer"
+                class="btn btn-small btn-ghost ripple">
+                <span>Presentation</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section class="section certifications" id="certifications">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>05 — Certifications</p>
+        <h2 class="section-title" data-reveal>Credentials that <span class="grad-text">back it up</span></h2>
+
+        <div class="certs-grid">
+          <div class="cert-card glass" data-reveal>
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z" />
+              </svg>
+            </div>
+            <h3>Microsoft PL-300</h3>
+            <p>Power BI Data Analyst Associate</p>
+            <span class="cert-issuer">Microsoft</span>
+          </div>
+          <div class="cert-card glass" data-reveal data-reveal-delay="100">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2 3 6v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z" />
+              </svg>
+            </div>
+            <h3>Power BI Data Analysis</h3>
+            <p>Hands-on training: cleaning, DAX, modeling &amp; dashboards</p>
+            <span class="cert-issuer">CampusX</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACHIEVEMENTS ===================== -->
+    <section class="section achievements" id="achievements">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>06 — By the numbers</p>
+        <div class="achievements-grid">
+          <div class="achieve-card" data-reveal>
+            <span class="achieve-num" data-counter data-target="50" data-suffix="K+">0</span>
+            <span class="achieve-label">Rows Analyzed</span>
+          </div>
+          <div class="achieve-card" data-reveal data-reveal-delay="80">
+            <span class="achieve-num" data-counter data-target="15" data-suffix="+">0</span>
+            <span class="achieve-label">Dashboard KPIs</span>
+          </div>
+          <div class="achieve-card" data-reveal data-reveal-delay="160">
+            <span class="achieve-num" data-counter data-target="3" data-suffix="+">0</span>
+            <span class="achieve-label">SQL Case Studies</span>
+          </div>
+          <div class="achieve-card" data-reveal data-reveal-delay="240">
+            <span class="achieve-num" data-counter data-target="65" data-suffix="K+">0</span>
+            <span class="achieve-label">Records Analyzed</span>
+          </div>
+
+          <div class="achieve-card" data-reveal data-reveal-delay="320">
+            <span class="achieve-num" data-counter data-target="20" data-suffix="%">0</span>
+            <span class="achieve-label">Reporting Time Reduced</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>07 — Services</p>
+        <h2 class="section-title" data-reveal>How I can <span class="grad-text">help your team</span></h2>
+
+        <div class="services-grid">
+          <div class="service-card glass" data-reveal>
+            <div class="service-icon"><svg viewBox="0 0 24 24">
+                <path d="M4 19V5m6 14V9m6 10V3" />
+              </svg></div>
+            <h3>Dashboard Development</h3>
+            <p>Interactive Power BI dashboards that surface KPIs your team actually checks daily.</p>
+          </div>
+          <div class="service-card glass" data-reveal data-reveal-delay="80">
+            <div class="service-icon"><svg viewBox="0 0 24 24">
+                <path d="M4 7h16M4 12h10M4 17h13" />
+              </svg></div>
+            <h3>SQL Analysis</h3>
+            <p>Complex joins, window functions and CTEs to answer real business questions from raw tables.</p>
+          </div>
+          <div class="service-card glass" data-reveal data-reveal-delay="160">
+            <div class="service-icon"><svg viewBox="0 0 24 24">
+                <path d="m5 5 14 14M5 19 19 5" />
+              </svg></div>
+            <h3>Data Cleaning</h3>
+            <p>Messy, inconsistent data transformed into a clean, analysis-ready dataset.</p>
+          </div>
+          <div class="service-card glass" data-reveal>
+            <div class="service-icon"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 3" />
+              </svg></div>
+            <h3>Business Intelligence</h3>
+            <p>Turning scattered reporting into a single source of truth for decision-makers.</p>
+          </div>
+          <div class="service-card glass" data-reveal data-reveal-delay="80">
+            <div class="service-icon"><svg viewBox="0 0 24 24">
+                <path d="M3 3v18h18M7 15l4-6 4 3 5-8" />
+              </svg></div>
+            <h3>Data Visualization</h3>
+            <p>Charts and visuals designed to make a trend obvious in under three seconds.</p>
+          </div>
+          <div class="service-card glass" data-reveal data-reveal-delay="160">
+            <div class="service-icon"><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" />
+              </svg></div>
+            <h3>Machine Learning</h3>
+            <p>Prediction models — from attrition to pricing — built, tuned and deployed end-to-end.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>08 — Testimonials</p>
+        <h2 class="section-title" data-reveal>What people <span class="grad-text">say</span></h2>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card glass" data-reveal>
+            <p class="testimonial-quote">Kunal has a rare mix — he reads a dataset the way most people read a report,
+              and his dashboard cut our review meetings in half.</p>
+            <div class="testimonial-person">
+              <div class="testimonial-avatar">RS</div>
+              <div>
+                <span class="testimonial-name">Reporting Lead</span>
+                <span class="testimonial-role">Unified Mentor Pvt. Ltd.</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass" data-reveal data-reveal-delay="100">
+            <p class="testimonial-quote">Handed him a messy pricing dataset and got back a tuned model and a usable app
+              within days. Clear communicator, sharper analyst.</p>
+            <div class="testimonial-person">
+              <div class="testimonial-avatar">AP</div>
+              <div>
+                <span class="testimonial-name">Project Mentor</span>
+                <span class="testimonial-role">InLighnX Global Pvt. Ltd.</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass" data-reveal data-reveal-delay="200">
+            <p class="testimonial-quote">His SQL case studies read like real business memos — every query answers a
+              question a stakeholder would actually ask.</p>
+            <div class="testimonial-person">
+              <div class="testimonial-avatar">SK</div>
+              <div>
+                <span class="testimonial-name">Peer Reviewer</span>
+                <span class="testimonial-role">Data Analytics Cohort</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <p class="section-eyebrow" data-reveal>09 — Contact</p>
+        <h2 class="section-title" data-reveal>Let's talk <span class="grad-text">data</span></h2>
+        <p class="section-sub" data-reveal>Open to Data Analyst, BI Developer and Analytics roles. Reach out directly or
+          use the form below.</p>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal>
+            <div class="contact-item">
+              <div class="contact-icon"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.9c.29.23.7.23.99 0L19.8 6H4.2z" />
+                </svg></div>
+              <div><span class="contact-label">Email</span><a
+                  href="mailto:kunalgeminikumar@gmail.com">kunalkash50@gmail.com</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2z" />
+                </svg></div>
+              <div><span class="contact-label">Phone</span><a href="tel:+919958334257">+91-9958334257</a></div>
+            </div>
+          </div>
+
+          <form class="contact-form glass" id="contactForm" data-reveal data-reveal-delay="150"
+            action="https://formsubmit.co/Kunalkash50@gmail.com" method="POST">
+
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Portfolio Contact - Someone wants to connect!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="">
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Let's collaborate" required>
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about the role or project..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary ripple full"><span>Send Message</span></button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">Kunal<span class="dot">.</span>kk</a>
+        <p>Data Analyst turning raw data into decisions.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-heading">Quick Links</span>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-social">
+        <span class="footer-heading">Elsewhere</span>
+        <div class="footer-social-icons">
+          <a href="https://www.linkedin.com/in/kunal-kashyap2909/" target="_blank" rel="noopener"
+            aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
+            </svg></a>
+          <a href="https://github.com/kunal-kashyap635/" target="_blank" rel="noopener" aria-label="GitHub"><svg
+              viewBox="0 0 24 24">
+              <path
+                d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" />
+            </svg></a>
+          <a href="mailto:kunalkash50@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24">
+              <path
+                d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5 7.3 5.9c.29.23.7.23.99 0L19.8 6H4.2z" />
+            </svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Kunal Kashyap</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
