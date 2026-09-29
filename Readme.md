@@ -40,6 +40,9 @@ Jul 2026 – Present
 **Machine Learning Intern — Unified Mentor Pvt. Ltd.**  
 Jan 2026 – Apr 2026
 
+**Data Science Intern — InLighnX Global Pvt. Ltd.**  
+Nov 2025 – Jan 2026
+
 ## 🎓 Education
 
 **Bachelor of Arts (Hons) — English**  
