@@ -29,6 +29,9 @@ Power BI and Python-based financial analysis project involving 65,000 records, a
 ### Customer Churn Analysis
 Python-based exploratory analysis of an OTT subscription dataset, identifying customer segments, churn patterns, and 20+ business KPIs.
 
+### EDA On Diwali Dataset
+Performed exploratory data analysis on 11K+ Diwali sales records using Python to uncover customer demographics, purchasing behaviour, regional trends, and product demand.
+
 ## 💼 Experience
 
 **Associate Analyst — R1 RCM Global Private Limited**  
