@@ -345,18 +345,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => { resize(); initPoints(); });
   })();
 
-  /* ---------------- CONTACT FORM (front-end only) ---------------- */
-  // (function contactForm() {
-  //   const form = document.getElementById('contactForm');
-  //   const status = document.getElementById('formStatus');
-  //   if (!form) return;
-  //   form.addEventListener('submit', (e) => {
-  //     // e.preventDefault();
-  //     status.textContent = "Thanks — your message is received.";
-  //     form.reset();
-  //   });
-  // })();
-
   /* ---------------- SET FOOTER YEAR ---------------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
